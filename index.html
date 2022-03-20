@@ -24,11 +24,16 @@
         const Banner = () => {
             let name = "My name is Om"
             let date = "Todays date is : "
+
+            const eventHandler = (e) =>{
+                console.log("clicked")
+                console.log(e)
+                console.log("Ayo ", name)
+            }
             return (
                 <div className = "banner">
                     <p>{name}</p>
-                    <p>{date} {new Date().toDateString()}</p>
-                    <p>A Random number : {Math.floor(Math.random()*100)}</p>
+                    <button onClick = {eventHandler}>click me</button>
                 </div>
                 
             )
